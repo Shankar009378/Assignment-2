@@ -1,0 +1,181 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+/* .header {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+} */
+.header {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+}
+
+/* Form Styles */
+.form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.form-control:focus ~ .form-label,
+.form-control:not(:placeholder-shown) ~ .form-label {
+    transform: translateY(-150%) scale(0.75);
+    color: #3498db;
+}
+
+.form-control {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    width: 100%;
+    /* transition: border-color 0.3s ease-in-out; */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.6);
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease-in-out; */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(52, 152, 219, 0.4);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #dcdcdc;
+}
+
+.footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #2980b9;
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.theme-button {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease-in-out; */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+}
+
+.theme-button.active {
+    border: 2px solid #3498db;
+    transform: scale(1.1);
+}
+
+.theme-button.light {
+    background-color: #f1c40f;
+}
+
+.theme-button.dark {
+    background-color: #34495e;
+}
+
+.theme-button.auto {
+    background-color: #bdc3c7;
+}
+
+.scroll-link {
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.scroll-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Add this CSS class to elements you want to animate */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
